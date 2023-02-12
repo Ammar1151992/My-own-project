@@ -1,0 +1,244 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  overflow-x: hidden;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  right: -14vw;
+  width: 14vw;
+  height: 100%;
+  background: #002046;
+  z-index: 6;
+  transition: all 300ms ease-in-out;
+}
+
+.sidebar .toggle-btn {
+  position: absolute;
+  top: 0.5vw;
+  left: -4vw;
+  width: 2vw;
+  height: 1.5vw;
+  cursor: pointer;
+}
+
+.sidebar .toggle-btn span {
+  position: absolute;
+  width: 100%;
+  height: 0.3vw;
+  background: #e2e3e5;
+  border: 1px solid #002046;
+  transform: translateY(-50%);
+  transition: all 300ms ease-in-out;
+}
+
+.sidebar .toggle-btn span:nth-child(1) {
+  top: 10%;
+}
+.sidebar .toggle-btn span:nth-child(2) {
+  top: 50%;
+}
+.sidebar .toggle-btn span:nth-child(3) {
+  top: 90%;
+}
+
+.sidebar .links a {
+  display: block;
+  right: 0;
+  padding: 15px 0px;
+  text-decoration: none;
+  color: #e2e3e5;
+  cursor: pointer;
+  border-bottom: 1px solid #013370;
+  padding-right: 5vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: right;
+}
+
+.sidebar .links .side-logo {
+  font-size: 2vw;
+}
+
+.sidebar .links a.active,
+.sidebar .links a:hover {
+  background: #e2e3e5;
+  color: #002046;
+}
+.sidebar .links a i {
+  position: absolute;
+  right: 0;
+  float: right;
+  margin-right: 2vw;
+  margin-top: 2%;
+}
+
+.sidebar.active {
+  right: 0px;
+}
+
+.sidebar.active .toggle-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.sidebar.active .toggle-btn span:nth-child(2) {
+  display: none;
+}
+.sidebar.active .toggle-btn span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.logo-sidebar {
+  position: relative;
+  margin: 10%;
+  padding: 2% 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  transform: translate(50%);
+  font-weight: 500;
+  border-bottom: 1px solid #e2e3e5;
+  cursor: pointer;
+}
+
+.logo-sidebar:hover {
+  width: 45%;
+  margin: 6%;
+}
+
+
+
+
+/* Dark Mode */
+
+.profile img.moon-color  {
+  border-color: #000106;
+}
+
+.shadow.moon-color {
+  position: absolute;
+  background: #000106;
+  background-color: #000106;
+  z-index: 5;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.shadow-footer.moon-color{
+  position: absolute;
+  background: #000106;
+  background-color: #000106;
+  z-index: 5;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+body.moon-color {
+  background-color: #000106;
+}
+
+.notify-bag.moon-color {
+  background-color: #e2e3e5;
+}
+
+.notify .text.moon-color {
+  color: #002046;
+}
+
+.notify-bag-1.moon-color {
+  color: #000106;
+}
+
+.sidebar.moon-color {
+  background-color: #000106;
+}
+
+.heading_name.moon-color {
+  background-image: url("../css/image/studentN2.png");
+  color: #e2e3e5;
+}
+
+.sidebar .links .sign-out a {
+  border-bottom: none;
+  width: 50%;
+  padding: 0 10px;
+  margin: 0;
+  margin-top: 8vw;
+}
+.sign-out {
+  width: 100%;
+  display: block;
+}
+
+.sidebar .links a i.settings {
+  margin: 0;
+  margin-right: 0.5vw;
+  background-color: #e2e3e5;
+  border-radius: 50%;
+  padding: 0.1vw;
+  color: #002046;
+}
+.sidebar .links .sign-out a.sign {
+  background-color: #e2e3e5;
+  color: #002046;
+  border-radius: 0.5vw;
+  padding: 0.5vw;
+  margin-left: 0.5vw;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+
+.sidebar .links a i.settings:hover {
+  color: #e2e3e5;
+  background-color: #002046;
+  transform: translate(0) rotate(45deg);
+  transition: all 0.4s;
+}
+
+.settings {
+  font-size: 2vw;
+  position: absolute;
+  right: 0;
+}
+
+.moon {
+  position: absolute;
+  width: 1.5vw;
+  margin: 0.5vw;
+  cursor: pointer;
+}
+
+
+body.body-side {
+  margin-right: 14vw;
+  transition: margin-right 0.6s;
+}
+
+.notify-bag .text.body-side {
+  padding: 0 8% 0 0;
+}
+
+.tr th.moon-color{
+  width: 2%;
+  color: #e2e3e5;
+}
+
+.tr td.moon-color{
+  width: 8%;
+  color: #e2e3e5;
+}
+

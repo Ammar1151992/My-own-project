@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #002046;
+}
+
+.box{
+    position: relative;
+    width: 35vw;
+    height: 54vw;
+    background: #002046;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 35vw;
+    height: 54vw;
+    background: linear-gradient(180deg,transparent, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 35vw;
+    height: 54vw;
+    background: linear-gradient(180deg,transparent, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    background: #002046;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 0vw 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    color: #e2e3e5;
+    font-weight: 500;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 11% 2% 3% 2%;
+    /* margin-right: 2%; */
+    background: transparent;
+    border: none;
+    outline: none;
+    line-height-step: none;
+    color: #002046;
+    font-size: 1vw;
+    z-index: 10;
+
+}
+
+
+
+.inputBox label{
+    width: 100%;
+    position: absolute;
+    font-size: 1.2vw;
+    color: #e2e3e5;
+    pointer-events: none;
+    left: 0;
+    padding: 6% 0%;
+    transition: 0.5s;
+}
+
+
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label
+{
+    color: #45f3ff;
+    transform: translateX(0px) translateY(-10px);
+    width: 1vw;
+    width: 100%;
+
+}
+
+
+.inputBox i{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e2e3e5;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 2.5vw;
+}
+
+
+
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #e2e3e5;
+    color: #002046;
+    padding: 3%;
+    margin: 2vw 0;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    width: 30%;
+    font-size: 1.2vw;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+ 
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 2vw 0 0.5vw 0;
+  }
+  
+  /* Avatar image */
+  .avatar {
+    font-size: 5vw;
+    border: 1px solid #e2e3e5;
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    padding: 2%;
+    color: #e2e3e5;
+  }
+  
+ 
+
+  .psw {
+  
+    color: #e2e3e5;
+    font-size: 1.2vw;
+    margin-left: 2%;
+    
+  }
+
+  .psw a{
+    text-decoration: none;
+    color: #45f3ff;
+  }
+  
